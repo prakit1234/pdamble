@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdertioan Gambling Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Pdertioan Gambling Game</h1>
+        <p id="points">Your Pdertioan: 20</p>
+        <p id="pdcry">Your pdcry: 0</p>
+        <div id="gambling-options">
+            <h2>Select a Gambling Option</h2>
+            <button onclick="startGame('Binomo')">Binomo or Surf Trading</button>
+            <button onclick="startGame('Heads or Tails')">Heads or Tails</button>
+            <button onclick="startGame('Color')">What Color Will Appear</button>
+            <button onclick="startGame('Lucky Number')">Lucky Number</button>
+        </div>
+        <div id="gamble-input" style="display: none;">
+            <input type="number" id="amount" placeholder="Amount to gamble" />
+            <div id="binomo-input" style="display: none;">
+                <label>Will the candle go up or down?</label>
+                <select id="binomo-choice">
+                    <option value="up">Up</option>
+                    <option value="down">Down</option>
+                </select>
+            </div>
+            <div id="heads-input" style="display: none;">
+                <label>Select Heads or Tails:</label>
+                <select id="heads-choice">
+                    <option value="heads">Heads</option>
+                    <option value="tails">Tails</option>
+                </select>
+            </div>
+            <div id="color-input" style="display: none;">
+                <label>Select a color:</label>
+                <select id="color-choice">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <button onclick="confirmColorChoice()">Confirm Color Choice</button>
+            </div>
+            <div id="lucky-number-input" style="display: none;">
+                <label>Choose a lucky number (1-10):</label>
+                <input type="number" id="lucky-number" min="1" max="10" />
+            </div>
+            <button onclick="gamble()">Gamble</button>
+        </div>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
